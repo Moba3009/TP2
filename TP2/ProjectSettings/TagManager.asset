@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fly
   layers:
   - Default
   - TransparentFX
@@ -11,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Border
+  - Celling
+  - Ground
   - 
   - 
   - 
@@ -43,4 +44,13 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3568696093
+    locked: 0
+  - name: Border
+    uniqueID: 613076223
+    locked: 0
+  - name: Celling
+    uniqueID: 2876606987
+    locked: 0
+  - name: Ground
+    uniqueID: 3789683963
     locked: 0

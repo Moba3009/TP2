@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Move();
+        CheckGround();
         Jump();
     }
 
@@ -29,15 +30,17 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = moveVelocity;
     }
 
+    private void CheckGround()
+    {
+         _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, _groundLayer);
+    }
+
     private void Jump()
     {
-        
-        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, _groundLayer);
-
-        
         if (_isGrounded && Input.GetButtonDown("Jump"))
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
         }
     }
 }
+
